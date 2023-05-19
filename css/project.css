@@ -1,0 +1,32 @@
+.project-form {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.project-form .form-container {
+  width: 500px;
+}
+
+.project-form .form-container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.project-form form label {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.project-form form input,
+textarea {
+  width: 100%;
+  font-size: 20px;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  background: #f4f3f3;
+  border: 1px solid #c4c4c4;
+  border-radius: 8px;
+  resize: none;
+}
