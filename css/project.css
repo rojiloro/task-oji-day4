@@ -1,4 +1,5 @@
 .project-form {
+  margin: auto;
   padding: 50px 0;
   display: flex;
   justify-content: center;
@@ -46,13 +47,16 @@ textarea {
 
 .tech {
   background-color: blue;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
 }
 
-.tech label {
-  background-color: salmon;
-  font-size: 15px;
-  margin-left: 20px;
-  margin-top: 0;
+.tech div {
+  background-color: blueviolet;
+  display: flex;
+  flex-direction: row;
+  width: ;
+}
+
+.tech div label {
+  margin-left: 5px;
 }
