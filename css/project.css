@@ -46,9 +46,13 @@ textarea {
 
 .tech {
   background-color: blue;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .tech label {
   background-color: salmon;
+  font-size: 15px;
+  margin-left: 20px;
+  margin-top: 0;
 }
