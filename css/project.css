@@ -30,3 +30,25 @@ textarea {
   border-radius: 8px;
   resize: none;
 }
+
+.project-form .date {
+  width: 50%;
+}
+
+.input-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-date div {
+  width: 48%;
+}
+
+.tech {
+  background-color: blue;
+  display: flex;
+}
+
+.tech label {
+  background-color: salmon;
+}
