@@ -1,17 +1,13 @@
-.project-form {
-  margin: auto;
-  padding: 50px 0;
-  display: flex;
-  justify-content: center;
-}
-
 .project-form .form-container {
   width: 500px;
+  margin: 30px auto;
+  display: flex;
 }
 
 .project-form .form-container h1 {
   text-align: center;
   margin-bottom: 40px;
+  padding: 10px;
 }
 
 .project-form form label {
@@ -45,18 +41,43 @@ textarea {
   width: 48%;
 }
 
-.tech {
-  background-color: blue;
+.tech .kotak {
   display: flex;
+  justify-content: start;
+  margin: auto;
+  width: 500px;
 }
 
-.tech div {
-  background-color: blueviolet;
+.tech .kotak2 {
+  width: 500px;
   display: flex;
-  flex-direction: row;
-  width: ;
+  justify-content: start;
+  margin: auto;
+  width: 500px;
 }
 
-.tech div label {
-  margin-left: 5px;
+#nodejs {
+  width: 30%;
+  padding: 5px;
+}
+
+#reactjs {
+  width: 30%;
+}
+
+#nextjs {
+  margin-left: 50px;
+  width: 30%;
+}
+
+#typescript {
+  margin-left: 48px;
+  width: 30%;
+}
+
+.tech label {
+  display: flex;
+  justify-content: center;
+  line-height: normal;
+  padding-left: 10px;
 }
