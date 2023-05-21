@@ -173,3 +173,27 @@ textarea {
   font-size: 25px;
   letter-spacing: 3px;
 }
+
+/* project details */
+.detail {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 1000px;
+  margin: 40px 0;
+  text-align: center;
+}
+.container h1 {
+  text-align: center;
+}
+
+.hero {
+  width: 800px;
+  display: flex;
+}
+
+.hero img {
+  width: 60%;
+}
