@@ -18,7 +18,7 @@ function submitData() {
   let emailReceiver = "kelengoji79@gmail.com";
 
   let a = document.createElement("a");
-  a.href = `mailto:${emailReceiver}?subject=${subject}&body=Halo, Nama saya ${name}, ${message}. Silahkan kontak saya ${phone}`;
+  a.href = `https://mail.google.com/mail/?view=cm&fs=1&to=:${emailReceiver}?subject=${subject}&body=Halo, Nama saya ${name}, ${message}. Silahkan kontak saya ${phone}`;
   a.click();
 
   console.log(name);
