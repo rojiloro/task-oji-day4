@@ -151,6 +151,26 @@ textarea {
   letter-spacing: 3px;
 }
 
+.btn .edit {
+  border: none;
+  padding: 5px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: blue;
+  color: white;
+}
+
+.btn .delete {
+  border: none;
+  padding: 5px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: darkred;
+  color: white;
+}
+
 /* project details */
 .detail {
   display: flex;
