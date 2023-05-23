@@ -28,7 +28,7 @@
     <div class="project">
       <div class="project-form">
         <div class="form-container">
-          <form onsubmit="addProject(event)">
+          <form>
             <h1>ADD MY PROJECT</h1>
             <div>
               <label for="input-project-name">Project Name</label>
@@ -54,20 +54,20 @@
               <label for="tech">Technologies</label>
               <div class="tech">
                 <div class="kotak">
-                  <label for="nodejs">
-                    <input type="checkbox" id="nodejs">NodeJs </input>
+                  <label for="playstore">
+                    <input type="checkbox" id="playstore">Playstore </input>
                   </label>
-                  <label for="nextjs">  
-                    <input type="checkbox" id="nextjs">NextJs </input>
+                  <label for="java">  
+                    <input type="checkbox" id="java">Java </input>
                   </label>
                 </div>
                 
                 <div class="kotak2">
-                  <label for="reactjs">
-                    <input type="checkbox" id="reactjs">ReactJs </input>
+                  <label for="android">
+                    <input type="checkbox" id="android">Android </input>
                   </label>
-                  <label for="typescript">  
-                    <input type="checkbox" id="typescript">Typescript</input>
+                  <label for="react">  
+                    <input type="checkbox" id="react">Typescript</input>
                   </label>
                 </div>
               </div>
@@ -83,7 +83,7 @@
               </div>
             </div>
             <div class="submit">
-              <button type="button">Post</button>
+              <button type="button" onclick="addProject()">Post</button>
             </div>
           </form>
         </div>
@@ -103,6 +103,7 @@
               <i class="fa-brands fa-google-play"></i>
               <i class="fa-brands fa-android"></i>
               <i class="fa-brands fa-java"></i>
+              <i class="fa-brands fa-react"></i>
             </div>
           </div>
         </div>

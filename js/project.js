@@ -1,57 +1,69 @@
 // post project
 let dataProject = [];
+let dataTech = [];
 
-function addProject(event) {
-  event.preventDefault();
-
+function addProject() {
+  // deklarasi variabel
   let nama = document.getElementById("input-project-name").value;
-  let tanggal = document.getElementById("input-date").value;
-  let deskripsi = document.getElementById("description").value;
-  let nodejs = document.getElementById("nodejs").value;
-  let nextjs = document.getElementById("nextjs").value;
-  let reactjs = document.getElementById("reactjs").value;
-  let typescript = document.getElementById("typescript").value;
-  let image = document.getElementById("input-blog-image").files;
+  let startDate = document.getElementById("input-start-date").value;
+  let endDate = document.getElementById("input-end-date").value;
+  let description = document.getElementById("description").value;
+  let playstore = document.getElementById("playstore");
+  let java = document.getElementById("java");
+  let android = document.getElementById("android");
+  let react = document.getElementById("react");
+  let image = document.getElementById("input-project-image").files;
 
-  image = URL.createObjectURL(image[0]);
+  // Mencari durasi project
+  let mulai = new Date(startDate);
+  let akhir = new Date(endDate);
+  let selisih = akhir.getTime() - mulai.getTime();
+  let durasi = Math.ceil(selisih / (1000 * 3600 * 24 * 30));
 
-  let project = {
+  // cek checkbox
+  if (playstore.checked) {
+    dataTech.push(playstore.value);
+  }
+  if (java.checked) {
+    dataTech.push(java.value);
+  }
+  if (android.checked) {
+    dataTech.push(android);
+  }
+  if (react.checked) {
+    dataTech.push(react);
+  }
+
+  // cek kondisi image
+  let imageURL = URL.createObjectURL(image[0]);
+  // if (image.target.files.length !== 0) {
+  //   this.setState({ image: URL.createObjectURL(e.target.files[0]) });
+  // }
+
+  let data = {
     nama,
-    tanggal,
-    deskripsi,
-    nodejs,
-    nextjs,
-    reactjs,
-    typescript,
-    image,
+    startDate,
+    endDate,
+    durasi,
+    description,
+    dataTech,
+    imageURL,
   };
 
-  dataProject.push(project);
+  dataProject.push(data);
   console.log(dataProject);
-
   renderProject();
+  dataTech = [];
 }
 
 function renderProject() {
   document.getElementById("tampil").innerHTML = "";
 
   for (let index = 0; index < dataProject.length; index++) {
-    document.getElementById("tampil").innerHTML += `
-    <h1>My Project</h1>
-        <div class="wadah">
-          <div class="card">
-            <img src="${dataProject[index].image}" alt="phone">
-            <div class="spasi">
-              <a class="judul" href="project-detail.html"><p> ${dataProject[index].nama}</p></a>
-              <p class="durasi">${dataProject[index].tanggal}</p>
-            </div>
-            <p class="detail">${dataProject[index].deskripsi}</p>
-            <div class="icon">
-              <i class="fa-brands fa-google-play"></i>
-              <i class="fa-brands fa-android"></i>
-              <i class="fa-brands fa-java"></i>
-            </div>
-          </div>
-        </div>`;
+    let techIcon = "";
+
+    for (let a = 0; a < dataProject[index].dataTech.length; a++){
+      techIcon += `<i class="fa-brands fa-google-play"></i>`
+    }
   }
 }
