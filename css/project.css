@@ -45,13 +45,11 @@ textarea {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-left: 20px;
-  background-color: yellowgreen;
 }
 .tech .kotak2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-left: 20px;
-  background-color: royalblue;
 }
 
 .tech label {
