@@ -1,17 +1,13 @@
 // post project
 let dataProject = [];
-let dataTech = [];
 
-function addProject() {
+function addProject(event) {
+  event.preventDefault();
   // deklarasi variabel
   let nama = document.getElementById("input-project-name").value;
   let startDate = document.getElementById("input-start-date").value;
   let endDate = document.getElementById("input-end-date").value;
   let description = document.getElementById("description").value;
-  let playstore = document.getElementById("playstore");
-  let java = document.getElementById("java");
-  let android = document.getElementById("android");
-  let react = document.getElementById("react");
   let image = document.getElementById("input-project-image").files;
 
   // Mencari durasi project
@@ -20,19 +16,18 @@ function addProject() {
   let selisih = akhir.getTime() - mulai.getTime();
   let durasi = Math.ceil(selisih / (1000 * 3600 * 24 * 30));
 
+  // icon
+  const playstorejsIcon = '<i class="fa-brands fa-google-play"></i>';
+  const androidjsIcon = '<i class="fa-brands fa-android"></i>';
+  const javajsIcon = '<i class="fa-brands fa-java"></i>';
+  const reactIcon = '<i class="fa-brands fa-react"></i>';
+
   // cek checkbox
-  if (playstore.checked) {
-    dataTech.push(playstore.value);
-  }
-  if (java.checked) {
-    dataTech.push(java.value);
-  }
-  if (android.checked) {
-    dataTech.push(android);
-  }
-  if (react.checked) {
-    dataTech.push(react);
-  }
+
+  let cbPlaystorejs = document.getElementById("playstore").checked ? playstorejsIcon : "";
+  let cbAndroidjs = document.getElementById("android").checked ? androidjsIcon : "";
+  let cbJavajs = document.getElementById("java").checked ? javajsIcon : "";
+  let cbReactjs = document.getElementById("react").checked ? reactIcon : "";
 
   // cek kondisi image
   let imageURL = URL.createObjectURL(image[0]);
@@ -45,25 +40,44 @@ function addProject() {
     startDate,
     endDate,
     durasi,
+    cbPlaystorejs,
+    cbAndroidjs,
+    cbJavajs,
+    cbReactjs,
     description,
-    dataTech,
     imageURL,
   };
 
   dataProject.push(data);
   console.log(dataProject);
+
   renderProject();
-  dataTech = [];
 }
 
 function renderProject() {
-  document.getElementById("tampil").innerHTML = "";
+  document.getElementById("wadah").innerHTML = "";
 
   for (let index = 0; index < dataProject.length; index++) {
-    let techIcon = "";
-
-    for (let a = 0; a < dataProject[index].dataTech.length; a++){
-      techIcon += `<i class="fa-brands fa-google-play"></i>`
-    }
+    document.getElementById("wadah").innerHTML += `
+   <div class="wadah">
+          <div class="card">
+            <img src="${dataProject[index].imageURL}" alt="tampil">
+            <div class="spasi">
+              <a class="judul" href="project-detail.html"><p> ${dataProject[index].nama}</p></a>
+              <p class="durasi">durasi : ${dataProject[i].durasi} bulan</p>
+            </div>
+            <p class="detail">${dataProject[i].description}</p>
+            <div class="icon" id="icon">
+              ${dataProject[index].cbPlaystorejs}
+              ${dataProject[index].cbAndroidjs}
+              ${dataProject[index].cbJavajs}
+              ${dataProject[index].cbReactjs}
+            </div>
+            <div class="btn">
+              <button class="edit">Edit</button>
+              <button class="delete">Delete</button>
+            </div>
+          </div>
+   `;
   }
 }
