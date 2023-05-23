@@ -64,9 +64,9 @@ function renderProject() {
             <img src="${dataProject[index].imageURL}" alt="tampil">
             <div class="spasi">
               <a class="judul" href="project-detail.html"><p> ${dataProject[index].nama}</p></a>
-              <p class="durasi">durasi : ${dataProject[i].durasi} bulan</p>
+              <p class="durasi">durasi : ${dataProject[index].durasi} bulan</p>
             </div>
-            <p class="detail">${dataProject[i].description}</p>
+            <p class="detail">${dataProject[index].description}</p>
             <div class="icon" id="icon">
               ${dataProject[index].cbPlaystorejs}
               ${dataProject[index].cbAndroidjs}

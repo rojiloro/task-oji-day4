@@ -28,7 +28,7 @@
     <div class="project">
       <div class="project-form">
         <div class="form-container">
-          <form>
+          <form onsubmit="addProject(event)">
             <h1>ADD MY PROJECT</h1>
             <div>
               <label for="input-project-name">Project Name</label>
@@ -82,8 +82,8 @@
                 </label>
               </div>
             </div>
-            <div class="submit">
-              <button type="button" onclick="addProject()">Post</button>
+            <div>
+              <button>Submit</button>
             </div>
           </form>
         </div>

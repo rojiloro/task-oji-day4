@@ -92,7 +92,7 @@ textarea {
   cursor: pointer;
 }
 
-.submit {
+.project-form form submit {
   text-align: end;
 }
 
@@ -127,6 +127,7 @@ textarea {
 .card img {
   width: 100%;
   border-radius: 5px;
+  object-fit: cover;
 }
 
 .judul p {
