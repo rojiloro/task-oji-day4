@@ -42,20 +42,21 @@ textarea {
 }
 
 .tech .kotak {
-  display: flex;
-  justify-content: start;
-  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 20px;
+  background-color: yellowgreen;
 }
-
 .tech .kotak2 {
-  display: flex;
-  justify-content: start;
-  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-left: 20px;
+  background-color: royalblue;
 }
 
 .tech label {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   line-height: normal;
   width: 30%;
 }
