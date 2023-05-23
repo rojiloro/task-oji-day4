@@ -45,41 +45,19 @@ textarea {
   display: flex;
   justify-content: start;
   margin: auto;
-  width: 500px;
 }
 
 .tech .kotak2 {
-  width: 500px;
   display: flex;
   justify-content: start;
   margin: auto;
-  width: 500px;
-}
-
-#nodejs {
-  width: 30%;
-  padding: 5px;
-}
-
-#reactjs {
-  width: 30%;
-}
-
-#nextjs {
-  margin-left: 50px;
-  width: 30%;
-}
-
-#typescript {
-  margin-left: 48px;
-  width: 30%;
 }
 
 .tech label {
   display: flex;
   justify-content: center;
   line-height: normal;
-  padding-left: 10px;
+  width: 30%;
 }
 
 .project-form form .input-project-image-group {
